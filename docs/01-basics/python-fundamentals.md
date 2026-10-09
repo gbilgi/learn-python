@@ -5,39 +5,38 @@
 ## Overview
 What this topic is and why it matters, in one or two sentences.
 
-## 1. Print Hello World
+### 1. Print function
 
 Explain in your own words, then add a short example and its output.
 
-## 2. Variables
+### 2. Data Types
 
 Explain in your own words, then add a short example and its output.
 
-## 3. Stack & Heap Memory
+### 3. Stack & Heap Memory
 
 Explain in your own words, then add a short example and its output.
 
-## 4. Id Function
+### 4. Id Function
 
 Explain in your own words, then add a short example and its output.
 
-## 5. Python Comments
+### 5. Python Comments
 
 Explain in your own words, then add a short example and its output.
 
-## 6. Data Types in Python
+### 6. Variables
 
 Explain in your own words, then add a short example and its output.
 
-## 7. Input Function in Python
+### 7. Input Function in Python
 
 Explain in your own words, then add a short example and its output.
 
-## Common mistakes / gotchas
-- 
-
-## Practice
+### Practice
 - [ ] 
 
-## Related
-- 
+### Related
+**Python is case-sensitive:** 
+
+**Garbage Collector:**
