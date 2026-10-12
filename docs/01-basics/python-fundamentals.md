@@ -54,7 +54,6 @@ print("Hello" + "World")
 ```
 
 ### 2. Data Types
-
 In Python, a data type is a category for values, and every value belongs to exactly one data type. Python is object-oriented: everything is an object including numbers, strings, data structures and functions.
 
 Variables do not explicitly require type declarations. It uses **dynamic typing**, where variables automatically takes on the type of the object assigned to it.
@@ -100,7 +99,7 @@ print(type(z))
 ```
 
 ### 3. Variables
-A **variable** is a label that points to a memory location storing data. Python is dynamically typed, so we do not need to declare the variable type - the type is inferred from the assigned value, and it can be changed later.
+In Python, a variable is a name that points to an object in memory — not a box that holds a value. Python is dynamically typed, so we do not need to declare the variable type - the type is inferred from the assigned value, and it can be changed later.
 The variable name is just a label/reference; the object carries the type.
 
 #### Naming Rules
