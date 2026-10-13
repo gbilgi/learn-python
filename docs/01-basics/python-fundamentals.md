@@ -170,18 +170,88 @@ print(type(name))
 # Sam
 # <class 'str'>
 ```
-when we need to accept different data type, we need to convert it.
+when we need to accept different data type, we need to convert it using Typecasting.
+
+### Typecasting
+Convert between data types using functions like int(), float(), str().
+
+#### Converting String
+
 ```python
-age = int(input("What is your age: "))
-print(age)
-print(type(age))
-# Output
-# What is your age: 43
-# 43
-# <class 'int'>
+print(int('123'))   # string of digits parsed to integer. 
+123
+
+print(float('123')) # string parsed to float.
+123.0
+
+print(str('123'))   # str() converts anything to its text representation. Always succeeds.
+123
+
+print(bool('123'))  # only an empty string is False. Any non-empty string is True.
+True                    
+
+print(int('3.14'))  # Only works for strings that look like integers. Decimals must go through float() first.
+ValueError: invalid literal for int() with base 10: '3.14'
+
+print(float('3.14'))# string parsed to float.
+3.14
+
+print(int('Hello')) # Text like "hello" can't be cast at all.
+ValueError: invalid literal for int() with base 10: 'Hello'
+
+print(bool(""))     # only an empty string is False. Any non-empty string is True.
+False
+
 ```
 
+#### Converting Integer
+```python
+print(int(100))     # already an integer, no change.
+100
+
+print(float(100))   #  integer cast to float adds .0 to signal it's now a floating-point.
+100.0
+
+print(str(100))     # str() converts anything to its text representation. Always succeeds.
+100
+
+print(bool(100))    # 0 is False, every other number is True. Includes negative numbers.
+True
+```
+
+#### Converting Float
+```python
+print(int(3.99))    # float to int truncates the decimal part (drops it, doesn't round).
+3
+
+print(float(3.99))  # already a float, no change.
+3.99
+
+print(str(3.99))    # str() converts anything to its text representation. Always succeeds.
+3.99
+
+print(bool(3.99))   # True — in Python, 0 is False, every other number is True.
+True
+```
+
+#### Converting Boolean
+```python
+print(int(True))    # True is 1, False is 0. Reflects Python's roots in C.
+1
+
+print(float(True))  # True→1.0, False→0.0.
+1.0
+
+print(str(True))    # str() converts anything to its text representation. Always succeeds.
+True
+
+print(bool(True))   # already a boolean.
+True
+```
+
+
+
 ### Related
-**Python is case-sensitive:** Python treats _uppercase_ and _lowercase_ letters as different characters. So `Name`, `name`, and `NAME` are three completely different identifiers.
+**Case-sensitive:** Python treats _uppercase_ and _lowercase_ letters as different characters. So `Name`, `name`, and `NAME` are three completely different identifiers.
 
 **Garbage Collector:** The Garbage Collector is Python's automatic memory management system — it frees memory occupied by objects that are no longer in use, so you never have to manually delete or manage memory.

@@ -1,21 +1,17 @@
 # Loops in Python
 
-**Status:** Not started | **Source:** 
+**Status:** In Progress
 
 ## Overview
-What this topic is and why it matters, in one or two sentences.
+Loops are used in programming to repeat a specific block of code.
 
-## 1. Intro to Python Loops
+## 1. While Loopps
 
-Explain in your own words, then add a short example and its output.
 
-## 2. While Loop
-
-Explain in your own words, then add a short example and its output.
-
-## 3. For Loop
+## 2. For Loop
 
 Explain in your own words, then add a short example and its output.
+
 
 ## Common mistakes / gotchas
 - 
