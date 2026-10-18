@@ -22,7 +22,7 @@ number = 3
 if number > 0:
     print("Its a Positive number")
 
-print("This is always printed)
+print("This is always printed")
 ```
 ## 2. If Else Statement
 - The if-else statement evaluates the expression and will execute the body of if only when result is True.
@@ -79,9 +79,9 @@ Conditional statements within other conditional statements.
 ```python
 # Syntax
 if expression:
-    Body of 1st if
+    Body of first if
     if expression:
-        Body of 2nd if
+        Body of second if
 else:
     Body of else
 ```

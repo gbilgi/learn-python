@@ -65,3 +65,30 @@ Decide execution flow, like if, else, elif
 
 **Nested if**  
 An if inside another if, creating multiple layers
+
+**DRY Priciple** 
+Don't Repeat Yourself. Loops express repetition once, cleanly.
+
+**While Loop**  
+Initialization, Condition, Action, Update. All four parts are required.
+
+**Iterable**  
+An iterable is a collection of items (the playlist). It holds data (list, string, range).
+
+**Iterator**  
+An iterator is what walks through an iterable. It walks through it one step at a time
+
+**Break**  
+break exits the loop entirely.
+
+**Continue**  
+Continue skips the rest of the current iteration and jumps to the next check.
+
+**`range() Function`**  
+`range(end)`, `range(start, end)`, `range(start, end, step)`. End is EXCLUDED.
+
+**For Loop**  
+For variable in iterable: action. The loop handles init, condition, and update automatically.
+
+**Nested loops**  
+For every ONE step of the outer loop, the inner loop runs to completion.
