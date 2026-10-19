@@ -2,7 +2,7 @@
 
 **Status:** In Progress 
 
-## Overview
+### Overview
 An operator in a programming language is a symbol that performs specific mathematical, relational or logical operation and *produces a final result*.
 
 An expression consists of **operators** and **operands**  
@@ -11,7 +11,7 @@ An expression consists of **operators** and **operands**
 Example: 5 + 3 = 8  
 Here 5 & 3 are Operands, '+' is the Operator
 
-## 1. Arithmetic Operators
+### 1. Arithmetic Operators
 Arithmetic operators are used to perform mathematical operations like 
 
 1. Addition (+) : Performs addition
@@ -69,14 +69,18 @@ print(5 // 1)       # floors to same number 5
 5
 ```
 
-### BODMAS Rule
+#### BODMAS Rule
 In Python, BODMAS rule is used to determine the order of operations for mathematical expressions.
 
-- Brackets (): Have the highest precedence and are evaluated first.
-- Division (/) and Multiplication (*): Have equal precedence and are evaluated from left to right.
-- Addition (+) and Subtraction (-): Have equal precedence and are evaluated from left to right.
+- Parenthsis ( )
+- Power (**)
+- Multiply (*), Divide (/), Floor division(//), Modulus (%)
+- Addition (+), Subtraction (-)
+- Not equal (!=), Equal (==)
+- <. <=, >, >= : Comparision Operators
+- not, and, or
 
-## 2. Comparison Operators
+### 2. Comparison Operators
 These operators are used to perform comparison and the result is always a boolean: **True** or **False**
 
 |Operator|Name|Example|
@@ -123,7 +127,7 @@ True
 False
 ```
 
-## 3. Assignment Operators
+### 3. Assignment Operators
 These operators are used to assign value to the variables.
 
 |Operator|Name|Example|
@@ -136,15 +140,16 @@ These operators are used to assign value to the variables.
 | %= | Reminder Assignment | a %= 6 #a = a % 6 |
 | **= | Exponent Assignment | a **= 7 #a = a ** 7 |
 
-## 4. Logical Operators
+### 4. Logical Operators
 These operations are used to check whether the expression is True or False. They are used to evaluate conditions in decision-making.
 
 |Operator|Name|Example|
 |-----|-----|-----|
-| and | a **and** b | True only of both the operands are True |
-| or | a **or** b | True if atleast one of operands is True |
-| not | not **a** | True if the operant is False and vice-versa |
+| and | a **and** b | **True** only of both the operands are True |
+| or | a **or** b | **True** if atleast one of operands is True |
+| not | not **a** | **True** if the operant is False and vice-versa |
 
+Truth Table - AND operation
 | A | B | A and B |
 |--|--|--|
 | True | True | **True** |
@@ -152,7 +157,7 @@ These operations are used to check whether the expression is True or False. They
 | False | True | **False** |
 | False | False | **False** |
 
-
+Truth Table - OR operation
 | A | B | A or B |
 |--|--|--|
 | True | True | **True** |
@@ -163,7 +168,7 @@ These operations are used to check whether the expression is True or False. They
 Usecase 1: `if user is not None and user.is_admin` - never errors even when user is None.  
 Usecase 2: `if file_exists(path) and read(path)` - only reads if the file exists.
 
-## 5. Special Operators
+### 5. Special Operators
 There are two special operators **"is"** and **"in"**
 
 1. Identity Operator (**is**)
@@ -172,4 +177,4 @@ It tells you if both the objects are at the same memory location.
 2. Membership Operator (**in**)
 It tells you if an object is part of another object or not.
 
-## Related
+### Related

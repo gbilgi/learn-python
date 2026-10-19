@@ -66,11 +66,17 @@ Decide execution flow, like if, else, elif
 **Nested if**  
 An if inside another if, creating multiple layers
 
+**Loops**  
+Structures that repeat a block of code while a condition is true
+
 **DRY Priciple** 
-Don't Repeat Yourself. Loops express repetition once, cleanly.
+Don't Repeat Yourself - avoid code repetition
 
 **While Loop**  
-Initialization, Condition, Action, Update. All four parts are required.
+Runs code block while a given condition is true
+
+**Infinite Loop**  
+A loop that runs endlessly because its terminating condition is never met
 
 **Iterable**  
 An iterable is a collection of items (the playlist). It holds data (list, string, range).
@@ -78,17 +84,28 @@ An iterable is a collection of items (the playlist). It holds data (list, string
 **Iterator**  
 An iterator is what walks through an iterable. It walks through it one step at a time
 
-**Break**  
-break exits the loop entirely.
+**Break Statement**  
+Stops loop execution and exits the loop immediately
 
-**Continue**  
-Continue skips the rest of the current iteration and jumps to the next check.
+**Continue Statement**  
+Skips the current iteration in a loop and moves to the next one
 
 **`range() Function`**  
-`range(end)`, `range(start, end)`, `range(start, end, step)`. End is EXCLUDED.
+Generates a sequence of numbers from start to end-1 with a step
 
 **For Loop**  
-For variable in iterable: action. The loop handles init, condition, and update automatically.
+Iterates over items in a sequence, like a range of numbers
 
 **Nested loops**  
-For every ONE step of the outer loop, the inner loop runs to completion.
+For every ONE step of the outer loop, the inner loop runs to completion  
+A loop inside another loop, used for complex patterns or iterations
+
+**Prime Number**  
+A number greater than 1, only divisible by 1 and itself
+
+**Scraper**  
+Operation to get the last digit of a number using modulus 10
+
+**Scissors**  
+Operation to remove the last digit of a number using integer division by 10
+

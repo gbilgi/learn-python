@@ -2,17 +2,15 @@
 
 **Status:** In Progress
 
-## Overview
+### Overview
 Loops are used in programming to repeat a specific block of code.  
-Loops utilize the DRY principle - **Dont Repeat Yourself**
+Loops utilize the DRY principle - **Dont Repeat Yourself**. Even repeating 2 times is not good in programming.
 
-Even repeating 2 times is not good in programming.
-
-These are the steps we do whenever there is a repetetion of task.  
-- Step1: Initialization
-- Step2: Consition
-- Step3: Action
-- Step4: Updation
+Following steps are used when repeating a task.  
+- Step1: Initialization  
+- Step2: Condition  
+- Step3: Action  
+- Step4: Updation  
 
 ### 1. While Loopps
 The while loop is used to iterate over a block of code as long as the condition is true.
@@ -25,10 +23,14 @@ while condition:         # Step2
       updation           # Step4
 ```
 ```python
-# Example
-
+# Printing 5 numners
+i = 1
+while i <= 5:
+    print(i)
+    i += 1
+#Output: 
 ```
-Infinite Loop: Always ensure, we have all the four steps defined. Missing the step4 to update may result in condition being in true state for ever and results in infinite loop.
+Infinite Loop: Always ensure, we have all the four steps defined. Missing step4 to update the variable may result in condition being in true state for ever and results in infinite loop.
 
 
 #### **Break**  
@@ -37,30 +39,28 @@ Whenever we execute the break statement inside a loop, it terminates the loop.
 ```python
 # Example
 count = 1
-
 while count <= 10:
     if count == 3:
         break
     print(count)
     count += 1
 
-# Outout: 1, 2
+#Outout: 1, 2
 ```
 
 #### **Continue**  
 It skips the current execution of the loop & control of loop moves to next iteration of loop. 
 
 ```python
-# Example
+#Example
 count = 1
-
 while count <= 10:
     count += 1
     if count == 3:
         continue
     print(count)
 
-# Output: 2, 3, 5, 6, 7, 8, 9, 10, 11
+#Output: 2, 4, 5, 6, 7, 8, 9, 10, 11
 ```
 
 ### 2. Range Function
@@ -78,37 +78,37 @@ It generates no's from [0 to end). Note the end will not be included, it will be
 ```python
 # Example
 range(4)
-# Output: 0, 1, 2, 3
+#Output: 0, 1, 2, 3
 ```
 
 #### **range(start,end)**
-It generates no's from start to end - 1. Default step size is 1.
+It generates no's from start to end - 1. Default step size is 1 towards right.
 
 ```python
 # Example
 range(2,6)
-# Output: 2, 3, 4, 5
+#Output: 2, 3, 4, 5
 
 range(-1,-5)
-# Output: None  # Default step is towards right from start postion.
+#Output: None  # Default step is towards right from start postion.
 
 range(-5,-1)
-# Output: -5, -4, -3, -2
+#Output: -5, -4, -3, -2
 ```
 
 #### **range(start,end,step-size)**
-It generates from start to end - 1 with a step size as defined.
+It generates from start to end - 1 with a step size and direction as defined.
 
 ```python
 # Example
 range(2,8,2)
-# Output: 2, 4, 6
+#Output: 2, 4, 6
 
 range(-1,-5,-1)
-# Output: -1, -2, -3, -4
+#Output: -1, -2, -3, -4
 
 range(-5,-1,-1)
-# Output: None  # Step is towards left from start postion.
+#Output: None  # Step is towards left from start postion.
 ```
 
 
@@ -127,17 +127,17 @@ Object used to extract iterables one by one. Ex: for loop is an iterator.
 for val in sequence:
     Body of for
 ```
-- Here `val` is the variable that takes the value of the item inside the sequence on each iteration.
-- Loop continues until we reach the last item in the sequence.
-- The body of the loop is seperated from the rest of the code using indentation.
-- With loop we can skip initialization, condition and updation.
+- Here `val` is the variable that takes the value of the item inside the sequence on each iteration.  
+- Loop continues until we reach the last item in the sequence.  
+- The body of the loop is seperated from the rest of the code using indentation.  
+- With loop we can skip initialization, condition and updation.  
 
 ```python
 # Example
 for i in range(10):
     print(i)
 
-# Output: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
+#Output: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
 ```
 
 ```python
@@ -145,7 +145,7 @@ for i in range(10):
 for i in range(0,1):
     print("Hello")
 
-# Output: Hello
+#Output: Hello
 ```
 ```python
 # Printing odd numbers
@@ -154,7 +154,7 @@ for i in range(10):
         continue
     print(i,end=" ")
 
-# Output: 1, 3, 5, 7, 9
+#Output: 1, 3, 5, 7, 9
 ```
 
 #### **Using _ (underscore) as variable**  
