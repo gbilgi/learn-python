@@ -12,7 +12,7 @@ Following steps are used when repeating a task.
 - Step3: Action  
 - Step4: Updation  
 
-### 1. While Loopps
+### 1. While Loops
 The while loop is used to iterate over a block of code as long as the condition is true.
 
 ```python
@@ -28,7 +28,7 @@ i = 1
 while i <= 5:
     print(i)
     i += 1
-#Output: 
+#Output: 1, 2, 3 ,4 ,5
 ```
 Infinite Loop: Always ensure, we have all the four steps defined. Missing step4 to update the variable may result in condition being in true state for ever and results in infinite loop.
 
@@ -45,7 +45,7 @@ while count <= 10:
     print(count)
     count += 1
 
-#Outout: 1, 2
+#Output: 1, 2
 ```
 
 #### **Continue**  
