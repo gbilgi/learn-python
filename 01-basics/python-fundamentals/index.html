@@ -1,0 +1,1947 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://gbilgi.github.io/learn-python/01-basics/python-fundamentals/">
+      
+      
+        <link rel="prev" href="../installation/">
+      
+      
+        <link rel="next" href="../../02-core-syntax/print-function/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Basic Fundamentals of Python - Learn Python</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#basic-fundamentals-of-python" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Learn Python" class="md-header__button md-logo" aria-label="Learn Python" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Learn Python
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Basic Fundamentals of Python
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/gbilgi/learn-python" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Learn Python" class="md-nav__button md-logo" aria-label="Learn Python" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Learn Python
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/gbilgi/learn-python" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Basics
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    1. Basics
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Basic Fundamentals of Python
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Basic Fundamentals of Python
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-print-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Print function
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-data-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Data Types
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Data Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic Types
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#four-data-structure-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Four Data Structure Types
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inspecting-type-with-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inspecting Type with type()
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Variables
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#naming-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Naming Rules
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assignment-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Assignment Patterns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ID Function
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-python-comments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Python Comments
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Python Comments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#single-line-comment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Single line comment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-line-comment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multi-line comment
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-input-function-in-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Input Function in Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#typecasting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Typecasting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Typecasting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#converting-string" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Converting String
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#converting-integer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Converting Integer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#converting-float" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Converting Float
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#converting-boolean" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Converting Boolean
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Core Syntax
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    2. Core Syntax
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-core-syntax/print-function/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Print Function
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-core-syntax/operators/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operators in Python
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-core-syntax/control-flow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Control Flow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-core-syntax/loops/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Loops in Python
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Data Structures
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    3. Data Structures
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-data-structures/strings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Strings in Python
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-data-structures/lists/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lists
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-data-structures/tuples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tuples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-data-structures/dictionaries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dictionary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-data-structures/sets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Functions & OOP
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    4. Functions & OOP
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-functions-and-oop/functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Functions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-functions-and-oop/oop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OOP in Python
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Practical Skills
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    5. Practical Skills
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-practical-skills/file-handling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    File Handling in Python
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-practical-skills/errors-and-exceptions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Error & Exception Handling
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheatsheet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cheatsheet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-print-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Print function
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-data-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Data Types
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Data Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic Types
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#four-data-structure-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Four Data Structure Types
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inspecting-type-with-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inspecting Type with type()
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Variables
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#naming-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Naming Rules
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assignment-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Assignment Patterns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ID Function
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-python-comments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Python Comments
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Python Comments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#single-line-comment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Single line comment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-line-comment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multi-line comment
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-input-function-in-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Input Function in Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#typecasting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Typecasting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Typecasting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#converting-string" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Converting String
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#converting-integer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Converting Integer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#converting-float" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Converting Float
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#converting-boolean" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Converting Boolean
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="basic-fundamentals-of-python">Basic Fundamentals of Python</h1>
+<p><strong>Status:</strong> In Progress</p>
+<h3 id="1-print-function">1. Print function</h3>
+<p><code>print()</code> is a function to output the text to the console. When called it evaluates any expressions supplied to it and converts values into text to be displayed.</p>
+<p>Statement for print:<br />
+<code>print(*objects, sep=' ', end=' ')</code></p>
+<p>After every print operation of each object, by default Python adds a space for separation. Similarly, after each print operation is completed, the output gets to a new line (\n).</p>
+<ul>
+<li>objects (positional values): Accepts any number of comma separated values or expressions.</li>
+<li>sep (Separator): Defines what character or string is printed between multiple arguments. Default value is space.</li>
+<li>end (End-of-Line Character): Defines what character or string is printed at the very end after all values are printed. Default value is next line <code>\n</code></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s1">'cats'</span><span class="p">,</span> <span class="s1">'dogs'</span><span class="p">,</span> <span class="s1">'mice'</span><span class="p">)</span>
+<span class="c1">#Output: cats dogs mice</span>
+
+<span class="c1">#Comma-Separated</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'cats'</span><span class="p">,</span> <span class="s1">'dogs'</span><span class="p">,</span> <span class="s1">'mice'</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">','</span><span class="p">)</span>
+<span class="c1">#Output: cats,dogs,mice</span>
+
+<span class="c1">#Delimit with vertical bars</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Mozilla'</span><span class="p">,</span> <span class="s1">'Firefox'</span><span class="p">,</span> <span class="s1">'Safar'</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">'|'</span><span class="p">)</span>
+<span class="c1">#Output: Mozilla|Firefox|Safari</span>
+
+<span class="c1">#Tab separated alignment</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'word'</span><span class="p">,</span> <span class="s1">'frequency'</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">'</span><span class="se">\t</span><span class="s1">'</span><span class="p">)</span>
+<span class="c1">#Output: word    frequency</span>
+
+<span class="c1">#Controlling line ending</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Hello'</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">' '</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'World'</span><span class="p">)</span>
+<span class="c1">#Output: Hello World</span>
+
+<span class="c1">#printing values</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
+<span class="c1">#Output: 1000 500</span>
+
+<span class="c1">#printing expressions</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">500</span> <span class="o">+</span> <span class="mi">200</span><span class="p">)</span>
+<span class="c1">#Output: 700</span>
+
+<span class="c1">#Mixed values</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Ramesh is"</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="s2">"years"</span><span class="p">,</span> <span class="s2">"old"</span><span class="p">)</span>
+<span class="c1">#Output: Ramesh is 45 years old</span>
+
+<span class="c1">#String Concatenation: Joining string together using + operator</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Hello"</span> <span class="o">+</span> <span class="s2">"World"</span><span class="p">)</span>
+<span class="c1">#Output: HelloWorld</span>
+</code></pre></div>
+<h3 id="2-data-types">2. Data Types</h3>
+<p>In Python, a data type is a category for values, and every value belongs to exactly one data type. Python is object-oriented: everything is an object including numbers, strings, data structures and functions.</p>
+<p>Variables do not explicitly require type declarations. It uses <strong>dynamic typing</strong>, where variables automatically takes on the type of the object assigned to it.</p>
+<h4 id="basic-types">Basic Types</h4>
+<ol>
+<li>Integers (<code>int</code>): Represents positive or negative numbers without a decimal. (-∞ to +∞) </li>
+<li>Floating-Point (<code>float</code>): Represents positive or negative numbers with floating point or decimal (-100.45, 567.76, 33.0).</li>
+<li>Boolean (<code>bool</code>): A data type strictly representing <code>True</code> or <code>False</code>.</li>
+<li>String (<code>str</code>): Sequence of text characters enclosed in quotes - single quote (' ') or double quotes (" ").</li>
+<li>None: A special data type denoting no value, None Type.</li>
+</ol>
+<h4 id="four-data-structure-types">Four Data Structure Types</h4>
+<ol>
+<li>List (<code>list</code>): Ordered, mutable collection (allows duplicates).</li>
+<li>Tuple (<code>tuple</code>): Ordered, immutable collection.</li>
+<li>Dictionary (<code>dict</code>): Ordered collection of key-value pairs (keys must be unique).</li>
+<li>Sets (<code>set</code>):Unordered collection of unique items.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Data Structure</th>
+<th style="text-align: left;">Syntax</th>
+<th style="text-align: left;">Ordered?</th>
+<th style="text-align: left;">Mutable?</th>
+<th style="text-align: left;">Duplicates?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">List</td>
+<td style="text-align: left;">[item1], [item2]</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">Mutable</td>
+<td style="text-align: left;">Yes</td>
+</tr>
+<tr>
+<td style="text-align: left;">Tuple</td>
+<td style="text-align: left;">(item1, item2)</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">Immutable</td>
+<td style="text-align: left;">Yes</td>
+</tr>
+<tr>
+<td style="text-align: left;">Dictionary</td>
+<td style="text-align: left;">{key:value}</td>
+<td style="text-align: left;">Unordered</td>
+<td style="text-align: left;">Mutable</td>
+<td style="text-align: left;">Keys:No, Values:Yes</td>
+</tr>
+<tr>
+<td style="text-align: left;">Set</td>
+<td style="text-align: left;">{item1}, {item2}</td>
+<td style="text-align: left;">Unordered</td>
+<td style="text-align: left;">Mutable</td>
+<td style="text-align: left;">No</td>
+</tr>
+</tbody>
+</table>
+<p><em>Mutable:</em> Their contents can be modified, appended, or removed.<br />
+<em>Immutable:</em> Their contents cannot be altered once created. </p>
+<h4 id="inspecting-type-with-type">Inspecting Type with <code>type()</code></h4>
+<p>To inspect the type of any value or variable at runtime, Python provides the built-in <code>type()</code> function.</p>
+<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mi">42</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mf">55.65</span>
+<span class="n">z</span> <span class="o">=</span> <span class="s2">"Hello"</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">y</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">z</span><span class="p">))</span>
+
+<span class="c1">#Output: &lt;class 'int'&gt;</span>
+<span class="c1">#Output: &lt;class 'float'&gt;</span>
+<span class="c1">#Output: &lt;class 'str'&gt;</span>
+</code></pre></div>
+<h3 id="3-variables">3. Variables</h3>
+<p>In Python, a variable is a name that points to an object in memory — not a box that holds a value. Python is dynamically typed, so we do not need to declare the variable type - the type is inferred from the assigned value, and it can be changed later.
+The variable name is just a label/reference; the object carries the type.</p>
+<h4 id="naming-rules">Naming Rules</h4>
+<ol>
+<li>Must start with a letter or underscore ( a-z , A-Z , _ )</li>
+<li>Cannot start with a digit</li>
+<li>Can only contain alphanumeric (letters, numbers or underscore)</li>
+<li>Names are case-sensitive</li>
+<li>Cannot be an in-built keyword</li>
+</ol>
+<p>Best practice: use snake_case for multi-word names. Eg: first_name, total_price</p>
+<h4 id="assignment-patterns">Assignment Patterns</h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># Multiple variables, same value</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">y</span> <span class="o">=</span> <span class="n">z</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="c1"># Multiple variables, different values</span>
+<span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span>
+</code></pre></div>
+<h4 id="id-function">ID Function</h4>
+<p>The <code>id()</code> function returns a <strong>unique integer</strong> that identifies <em>where</em> the object lives in the memory for the lifetime of the object.
+<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">a</span><span class="p">))</span> <span class="c1">#Output: Eg: 94300019145712</span>
+</code></pre></div></p>
+<h3 id="4-python-comments">4. Python Comments</h3>
+<p>A comment is a text in the code that Python interpreter completely ignores. It starts with <code>#</code> and runs to the end of the line.</p>
+<h4 id="single-line-comment">Single line comment</h4>
+<p><div class="highlight"><pre><span></span><code><span class="c1"># Calculate the area of triangle</span>
+<span class="n">area</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">radius</span> <span class="o">**</span> <span class="mi">2</span>
+</code></pre></div>
+Comments can also be used to disable a line of code
+<div class="highlight"><pre><span></span><code><span class="c1">#print("This line is disabled")</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"This line is enabled"</span><span class="p">)</span>
+</code></pre></div></p>
+<h4 id="multi-line-comment">Multi-line comment</h4>
+<ol>
+<li>Approach 1
+<div class="highlight"><pre><span></span><code><span class="c1"># This is a block comment</span>
+<span class="c1"># explaining a complex algorithm.</span>
+<span class="c1"># Each line starts with #.</span>
+</code></pre></div></li>
+<li>Approach 2
+<div class="highlight"><pre><span></span><code><span class="sd">"""</span>
+<span class="sd">This is a multi-line block</span>
+<span class="sd">using triple quotes.</span>
+<span class="sd">It's ignored if not assigned to a variable.</span>
+<span class="sd">"""</span>
+</code></pre></div></li>
+</ol>
+<h3 id="5-input-function-in-python">5. Input Function in Python</h3>
+<p><code>input()</code> is a function to take user input. By default, the input is always stored as string.<br />
+Key-point: The data entered by user (integer, float, sting) is always stored as string by default.</p>
+<p><div class="highlight"><pre><span></span><code><span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter your Name: "</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>
+<span class="c1"># Output:</span>
+<span class="c1"># Enter your Name: Sam</span>
+<span class="c1"># Sam</span>
+<span class="c1"># &lt;class 'str'&gt;</span>
+</code></pre></div>
+when we need to accept different data type, we need to convert it using Typecasting.</p>
+<h3 id="typecasting">Typecasting</h3>
+<p>Convert between data types using functions like int(), float(), str().</p>
+<h4 id="converting-string">Converting String</h4>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="s1">'123'</span><span class="p">))</span>   <span class="c1"># string of digits parsed to integer. </span>
+<span class="mi">123</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="s1">'123'</span><span class="p">))</span> <span class="c1"># string parsed to float.</span>
+<span class="mf">123.0</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="s1">'123'</span><span class="p">))</span>   <span class="c1"># str() converts anything to its text representation. Always succeeds.</span>
+<span class="mi">123</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">bool</span><span class="p">(</span><span class="s1">'123'</span><span class="p">))</span>  <span class="c1"># only an empty string is False. Any non-empty string is True.</span>
+<span class="kc">True</span>                    
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="s1">'3.14'</span><span class="p">))</span>  <span class="c1"># Only works for strings that look like integers. Decimals must go through float() first.</span>
+<span class="ne">ValueError</span><span class="p">:</span> <span class="n">invalid</span> <span class="n">literal</span> <span class="k">for</span> <span class="nb">int</span><span class="p">()</span> <span class="k">with</span> <span class="n">base</span> <span class="mi">10</span><span class="p">:</span> <span class="s1">'3.14'</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="s1">'3.14'</span><span class="p">))</span><span class="c1"># string parsed to float.</span>
+<span class="mf">3.14</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="s1">'Hello'</span><span class="p">))</span> <span class="c1"># Text like "hello" can't be cast at all.</span>
+<span class="ne">ValueError</span><span class="p">:</span> <span class="n">invalid</span> <span class="n">literal</span> <span class="k">for</span> <span class="nb">int</span><span class="p">()</span> <span class="k">with</span> <span class="n">base</span> <span class="mi">10</span><span class="p">:</span> <span class="s1">'Hello'</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">bool</span><span class="p">(</span><span class="s2">""</span><span class="p">))</span>     <span class="c1"># only an empty string is False. Any non-empty string is True.</span>
+<span class="kc">False</span>
+</code></pre></div>
+<h4 id="converting-integer">Converting Integer</h4>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span>     <span class="c1"># already an integer, no change.</span>
+<span class="mi">100</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span>   <span class="c1">#  integer cast to float adds .0 to signal it's now a floating-point.</span>
+<span class="mf">100.0</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span>     <span class="c1"># str() converts anything to its text representation. Always succeeds.</span>
+<span class="mi">100</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">bool</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span>    <span class="c1"># 0 is False, every other number is True. Includes negative numbers.</span>
+<span class="kc">True</span>
+</code></pre></div>
+<h4 id="converting-float">Converting Float</h4>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="mf">3.99</span><span class="p">))</span>    <span class="c1"># float to int truncates the decimal part (drops it, doesn't round).</span>
+<span class="mi">3</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="mf">3.99</span><span class="p">))</span>  <span class="c1"># already a float, no change.</span>
+<span class="mf">3.99</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="mf">3.99</span><span class="p">))</span>    <span class="c1"># str() converts anything to its text representation. Always succeeds.</span>
+<span class="mf">3.99</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">bool</span><span class="p">(</span><span class="mf">3.99</span><span class="p">))</span>   <span class="c1"># True — in Python, 0 is False, every other number is True.</span>
+<span class="kc">True</span>
+</code></pre></div>
+<h4 id="converting-boolean">Converting Boolean</h4>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="kc">True</span><span class="p">))</span>    <span class="c1"># True is 1, False is 0. Reflects Python's roots in C.</span>
+<span class="mi">1</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="kc">True</span><span class="p">))</span>  <span class="c1"># True→1.0, False→0.0.</span>
+<span class="mf">1.0</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="kc">True</span><span class="p">))</span>    <span class="c1"># str() converts anything to its text representation. Always succeeds.</span>
+<span class="kc">True</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">bool</span><span class="p">(</span><span class="kc">True</span><span class="p">))</span>   <span class="c1"># already a boolean.</span>
+<span class="kc">True</span>
+</code></pre></div>
+<h3 id="related">Related</h3>
+<p><strong>Case-sensitive:</strong> Python treats <em>uppercase</em> and <em>lowercase</em> letters as different characters. So <code>Name</code>, <code>name</code>, and <code>NAME</code> are three completely different identifiers.</p>
+<p><strong>Garbage Collector:</strong> The Garbage Collector is Python's automatic memory management system — it frees memory occupied by objects that are no longer in use, so you never have to manually delete or manage memory.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.top", "search.suggest", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
