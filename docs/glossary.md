@@ -109,3 +109,38 @@ Operation to get the last digit of a number using modulus 10
 **Scissors**  
 Operation to remove the last digit of a number using integer division by 10
 
+**List**  
+An ordered, mutable collection of elements in Python
+
+**Array**  
+Considered as the core of a list in Python, lists are built upon arrays
+
+**List Syntax**  
+Square brackets with elements inside, e.g., [element1, element2]
+
+**Append**  
+Add an element to the end of a list
+
+**Insert**  
+Insert an element to the left of the specified index in a list
+
+**Pop**  
+Remove and return an element at a specified index
+
+**Remove**  
+Remove the first occurrence of a specified value from a list
+
+**len()**
+Function that returns the number of elements in a list
+
+**Negative Indexing**  
+Access elements from the end of a list using negative indices, e.g., -1 for the last element
+
+**List Slicing**  
+Get a subset of a list using the format my_list[start:end]
+
+**List Iteration**  
+Loop over each element in a list using a loop, like for element in my_list
+
+
+

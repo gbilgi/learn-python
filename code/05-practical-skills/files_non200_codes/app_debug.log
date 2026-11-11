@@ -1,0 +1,13 @@
+[DEBUG]  something  later
+[INFO] 200 OK then 500 error after
+Status200OK is not valid
+abc404xyz is not valid 	
+[ERROR] 500 Oops
+200 Everything fine
+404 Oops Not Found
+[INFO] 12:01:03 Server check 200 OK
+[WARNING] 10:22:33 Request failed 503 Service Unavailable
+[INFO] 2025-08-08 12:01:03 GET /index.html 200 OK
+[WARNING] 2025-08-08 12:01:10 GET /not-found 404 Not Found
+Random text with numbers 12:34
+[ERROR] 2025-08-08 12:01:15 GET /server-error 500 Internal Server Error

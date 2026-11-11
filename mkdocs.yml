@@ -15,6 +15,9 @@ markdown_extensions:
   - tables
   - pymdownx.highlight
   - pymdownx.superfences
+  - pymdownx.snippets:
+      base_path: ["."]
+      check_paths: true
 
 nav:
   - Home: index.md
@@ -39,6 +42,20 @@ nav:
   - "5. Practical Skills":
       - File Handling in Python: 05-practical-skills/file-handling.md
       - Error & Exception Handling: 05-practical-skills/errors-and-exceptions.md
+      - Practice Problems:
+          - Overview: 05-practical-skills/practice/index.md
+          - "01 Data Types": 05-practical-skills/practice/01-data-types.md
+          - "02 Operators and Control Statements": 05-practical-skills/practice/02-operators-and-control-statements.md
+          - "03 Iteration": 05-practical-skills/practice/03-iteration.md
+          - "04 Lab: Iteration": 05-practical-skills/practice/04-lab-iteration.md
+          - "05 Functions": 05-practical-skills/practice/05-functions.md
+          - "06 1D List": 05-practical-skills/practice/06-1d-list.md
+          - "07 2D List": 05-practical-skills/practice/07-2d-list.md
+          - "08 Lab: List": 05-practical-skills/practice/08-lab-list.md
+          - "09 Tuples & Strings": 05-practical-skills/practice/09-tuples-and-strings.md
+          - "10 Sets and Dictionaries": 05-practical-skills/practice/10-sets-and-dictionaries.md
+          - "11 File & Exception Handling": 05-practical-skills/practice/11-file-and-exception-handling.md
+          - "12 Interview Problems": 05-practical-skills/practice/12-interview-problems.md
   - Cheatsheet: cheatsheet.md
   - Glossary: glossary.md
   - Resources: resources.md

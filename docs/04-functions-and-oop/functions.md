@@ -48,7 +48,7 @@ add(a, b)
  Help on add line 1/4 (END) (press h for help or q to quit)
 ```
 
-### 3. Parameter & Arguments
+### 3. Parameters & Arguments
 Parameters are the variable names listed in the functions definition.  
 Arguments are the actual values passed to the function when we call the function.
 
@@ -119,7 +119,8 @@ print(total_bill_amount)
 
 ### 4. Return
 - A function can send back a result using the `return` statement.  
-- If the `retuen` is not defined, the function returns `None` value. It is also not mandatory to add `return` in the function.
+- If the `return` is not defined, the function returns `None` value.
+- It is not mandatory to add `return` in the function.
 - Return also **immediately stops** the function - any code written after this is not executed. 
 - We can also return multiple values from a function.
 
@@ -133,7 +134,7 @@ print(multiply(100,5))
 #Output: 500
 ```
 ```python
-#Example : Returning two values
+#Example : Returning multiple values
 def add_div(a,b):
     add = a + b
     div = a / b
@@ -148,7 +149,7 @@ print(x1,x2)
 ### 5. Scope of a Variable
 A variable can be defined either inside or outside a function which determines its scope.
 
-- **Local Scope:** Parameters and variables defined inside a function is not visible from outside. Hence they have a local scope. Once the function exits, they are erased from the memory.
+- **Local Scope:** Parameters and variables defined inside a function are not visible from outside. Hence they have a local scope. Once the function exits, they are erased from the memory.
 
 ```python
 #Example: Local scope
@@ -163,7 +164,7 @@ print("Total outside = ", total)
 #Output: NameError: name 'total' is not defined
 ```
 
-- **Global scope:** Variables defined outside the function are visible and accessible from inside as well as outside a function. Such variable values can be read from inside a function, but they cannot be updated. We need to add keyword `global` if we want to update the global variables.
+- **Global scope:** Variables defined outside the function are visible and accessible from inside as well as outside a function. Such variable values can be read from inside a function, but they cannot be updated.
 
 ```python
 #Example: Global scope
@@ -184,6 +185,7 @@ We can define the variable as global with the `global` keyword. Now the variable
 #Example: Global variable
 total = 0
 def add(a,b):
+    global total
     total = a + b
     print("Total inside = ", total)
 
@@ -255,7 +257,7 @@ def double(x):
 double = lambda x: x * 2
 ```
 
-**Key Rule**
+**Key Rule**  
 - **One expression only** - no` if/else` blocks, no loops, no multiple lines.
 - **No name** - You can assign one, but that defeats the point.
 - **Short-lived** - best for quick throwaway logic, for anything complex, just write a normal `def`

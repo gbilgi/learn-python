@@ -1,0 +1,34 @@
+Got 99 problems
+Code 1000 too long
+Mix 12:34 time only
+status="200" msg="ok"
+status=404 msg="not found"
+"500" error occurred
+		404 Tab before
+   200 spaced
+500 at start
+
+192.168.0.1 GET /page 200 OK
+10.0.0.5 POST /login 401 Unauthorized
+200 OK at start then 404 later
+
+Arabic-Indic: ٢٤٥ looks like digits but shouldn’t match
+Devanagari: ५१२ also shouldn’t match
+ASCII 404 should match
+{500}
+<200>
+[404],
+(200),
+200 then 404 then 500
+404 then 200 then 500
+500 then 200 then 404
+noise only !!!
+WARN: code? none
+INFO 201 Created
+DEBUG 200 OK
+TRACE 418 I'm a teapot
+200
+404
+x 200
+x 404
+500 x

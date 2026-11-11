@@ -1,0 +1,99 @@
+[INFO] 2025-08-08 12:01:03 GET /index.html 200 OK
+[WARNING] 2025-08-08 12:01:10 GET /not-found 404 Not Found
+[ERROR] 2025-08-08 12:01:15 GET /server-error 500 Internal Server Error
+[DEBUG] Random event with no status code
+[INFO] 2025-08-08 12:05:00 GET /slow 504 Gateway Timeout
+[WARNING] Something 404 then 200 later
+[NOTICE] This line contains number 999 but is not an HTTP log
+[ERROR] 2025-08-08 12:10:45 POST /login 403 Forbidden
+200 OK but at start of line
+404 Error at start of line
+Text with number 123 in the middle and 500 after
+[INFO] 2025-08-08 12:20:10 GET /health 200 OK
+[INFO] 2025-08-08 12:21:00 GET /redirect 302 Found
+Empty line follows:
+[DEBUG] 500 then more 200 after
+OK then fail: 200 later 500
+Fine: 200
+Oops first: 404 then 200
+
+[200] OK
+(status=404) Not Found
+code: 500, message="boom"
+
+Status200OK is not valid
+xx404yy not valid either
+justtext
+
+Got 99 problems
+Code 1000 too long
+Mix 12:34 time only
+
+		404 Tab before
+   200 spaced
+500 at start
+
+192.168.0.1 GET /page 200 OK
+10.0.0.5 POST /login 401 Unauthorized
+200 OK at start then 404 later
+
+Arabic-Indic: ٢٤٥ looks like digits but shouldn’t match
+Devanagari: ५१२ also shouldn’t match
+ASCII 404 should match
+
+{500}
+<200>
+[404],
+(200),
+
+200 then 404 then 500
+404 then 200 then 500
+500 then 200 then 404
+
+noise only !!!
+WARN: code? none
+INFO 201 Created
+DEBUG 200 OK
+TRACE 418 I'm a teapot
+
+200
+404
+x 200
+x 404
+500 x
+
+status="200" msg="ok"
+status=404 msg="not found"
+"500" error occurred
+
+metrics: t=123ms size=456 bytes code=200 retry=0 id=789
+metrics: t=111ms size=222 bytes code=503 retry=1 id=333
+
+[INFO] 2025-08-08 12:01:03 GET /index.html 200 OK
+[WARNING] 2025-08-08 12:01:10 GET /not-found 404 Not Found
+[ERROR] 2025-08-08 12:01:15 GET /server-error 500 Internal Server Error
+[DEBUG] Random event with no status code
+[INFO] 2025-08-08 12:05:00 GET /slow 504 Gateway Timeout
+[WARNING] Something 404 then 200 later
+[NOTICE] This line contains number 999 but is not an HTTP log
+[ERROR] 2025-08-08 12:10:45 POST /login 403 Forbidden
+200 OK but at start of line
+404 Error at start of line
+Text with number 123 in the middle and 500 after
+[INFO] 2025-08-08 12:20:10 GET /health 200 OK
+[INFO] 2025-08-08 12:21:00 GET /redirect 302 Found
+
+
+[INFO] 2025-08-08 12:01:03 GET /index.html 200 OK
+[WARNING] 2025-08-08 12:01:10 GET /not-found 404 Not Found
+[ERROR] 2025-08-08 12:01:15 GET /server-error 500 Internal Server Error
+[DEBUG] Random event with no status code
+[INFO] 2025-08-08 12:05:00 GET /slow 504 Gateway Timeout
+[WARNING] Something 404 then 200 later
+[NOTICE] This line contains number 999 but is not an HTTP log
+[ERROR] 2025-08-08 12:10:45 POST /login 403 Forbidden
+200 OK but at start of line
+404 Error at start of line
+Text with number 123 in the middle and 500 after
+[INFO] 2025-08-08 12:20:10 GET /health 200 OK
+[INFO] 2025-08-08 12:21:00 GET /redirect 302 Found
