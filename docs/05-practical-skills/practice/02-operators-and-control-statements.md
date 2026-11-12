@@ -99,3 +99,62 @@ GRAND MASTER
 - Idea: The program uses nested if-elif-else statements to classify a user's coding rating into a skill tier, printing the title in ALL CAPS if the rating is even and in lowercase if it is odd.
 - Time / space complexity:
 - Gotchas:
+
+## Problem 04: Max of three
+
+**Difficulty:** Easy | **Tags:** 
+
+### Problem statement
+Write a program to input three numbers(A, B & C) from user and print the maximum element among A, B & C in each line.
+
+### Sample input
+```text
+First line is a single integer A.
+Second line is a single integer B.
+Third line is a single integer C.
+```
+
+### Expected output
+```text
+One line answer.
+```
+
+### Solution
+```python title="04_max_of_three.py"
+--8<-- "code/05-practical-skills/02-operators-and-control-statements/04_max_of_three.py"
+```
+
+### Approach and notes
+- Idea: The program sets the first number as a running maximum and sequentially updates it using if statements whenever a larger number is found among the remaining inputs.
+- Time / space complexity:
+- Gotchas:
+
+## Problem 05: Angles of valid triangle
+
+**Difficulty:** Easy | **Tags:** 
+
+### Problem statement
+You are given 3 integer angles(in degrees) A, B and C of a triangle. You have to tell whether the triangle is valid or not.
+A triangle is valid if sum of its angles equals to 180.
+
+### Sample input
+```text
+First line of the input contains an integer A.
+Second line of the input contains an integer B.
+Third line of the input contains an integer C.
+```
+
+### Expected output
+```text
+(paste the real output here)
+```
+
+### Solution
+```python title="05_angles_of_valid_triangle.py"
+--8<-- "code/05-practical-skills/02-operators-and-control-statements/05_angles_of_valid_triangle.py"
+```
+
+### Approach and notes
+- Idea: The program sums three user-entered angles and uses an if-else statement to check if the total equals 180 degrees, determining whether they form a valid triangle.
+- Time / space complexity:
+- Gotchas:
